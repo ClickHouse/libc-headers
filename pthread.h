@@ -415,6 +415,7 @@ extern int pthread_getattr_default_np (pthread_attr_t *__attr)
 extern int pthread_setattr_default_np (const pthread_attr_t *__attr)
      __THROW __nonnull ((1));
 
+__asm__(".symver pthread_getattr_np,pthread_getattr_np@GLIBC_2.2.5");
 /* Initialize thread attribute *ATTR with attributes corresponding to the
    already running thread TH.  It shall be called on uninitialized ATTR
    and destroyed with pthread_attr_destroy when no longer needed.  */

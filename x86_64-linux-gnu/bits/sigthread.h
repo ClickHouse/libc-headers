@@ -26,6 +26,7 @@
 /* Functions for handling signals. */
 #include <bits/types/__sigset_t.h>
 
+__asm__(".symver pthread_sigmask,pthread_sigmask@GLIBC_2.2.5");
 /* Modify the signal mask for the calling thread.  The arguments have
    the same meaning as for sigprocmask(2). */
 extern int pthread_sigmask (int __how,

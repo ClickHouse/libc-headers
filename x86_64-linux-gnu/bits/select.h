@@ -32,9 +32,9 @@
 
 # define __FD_ZERO(fdsp) \
   do {									      \
-    int __d0, __d1;							      \
+    int _d0, _d1;							      \
     __asm__ __volatile__ ("cld; rep; " __FD_ZERO_STOS			      \
-			  : "=c" (__d0), "=D" (__d1)			      \
+			  : "=c" (_d0), "=D" (_d1)			      \
 			  : "a" (0), "0" (sizeof (fd_set)		      \
 					  / sizeof (__fd_mask)),	      \
 			    "1" (&__FDS_BITS (fdsp)[0])			      \
